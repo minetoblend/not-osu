@@ -24,7 +24,7 @@ namespace osu.Game.Rulesets.NotOsu.Beatmaps
 
         protected override IEnumerable<NotOsuHitObject> ConvertHitObject(HitObject original, IBeatmap beatmap, CancellationToken cancellationToken)
         {
-            yield return new NotOsuHitObject
+            yield return new NotOsuNote
             {
                 Samples = original.Samples,
                 StartTime = original.StartTime,

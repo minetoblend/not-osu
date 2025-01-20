@@ -4,12 +4,15 @@
 using osu.Framework.Allocation;
 using osu.Framework.Graphics;
 using osu.Game.Rulesets.UI;
+using osuTK;
 
 namespace osu.Game.Rulesets.NotOsu.UI
 {
     [Cached]
     public partial class NotOsuPlayfield : Playfield
     {
+        public static readonly Vector2 BASE_SIZE = new Vector2(512, 384);
+
         [BackgroundDependencyLoader]
         private void load()
         {

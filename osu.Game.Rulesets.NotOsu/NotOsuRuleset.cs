@@ -11,10 +11,12 @@ using osu.Framework.Input.Bindings;
 using osu.Game.Beatmaps;
 using osu.Game.Graphics;
 using osu.Game.Rulesets.Difficulty;
+using osu.Game.Rulesets.Edit;
 using osu.Game.Rulesets.NotOsu.Beatmaps;
 using osu.Game.Rulesets.NotOsu.Mods;
 using osu.Game.Rulesets.NotOsu.UI;
 using osu.Game.Rulesets.Mods;
+using osu.Game.Rulesets.NotOsu.Edit;
 using osu.Game.Rulesets.UI;
 using osuTK;
 using osuTK.Graphics;
@@ -53,6 +55,8 @@ namespace osu.Game.Rulesets.NotOsu
             new KeyBinding(InputKey.Z, NotOsuAction.Button1),
             new KeyBinding(InputKey.X, NotOsuAction.Button2),
         };
+
+        public override HitObjectComposer? CreateHitObjectComposer() => new NotOsuHitObjectComposer(this);
 
         public override Drawable CreateIcon() => new Icon(ShortName[0]);
 

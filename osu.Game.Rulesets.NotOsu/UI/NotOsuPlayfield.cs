@@ -2,7 +2,6 @@
 // See the LICENCE file in the repository root for full licence text.
 
 using osu.Framework.Allocation;
-using osu.Framework.Graphics;
 using osu.Game.Rulesets.UI;
 using osuTK;
 
@@ -16,10 +15,9 @@ namespace osu.Game.Rulesets.NotOsu.UI
         [BackgroundDependencyLoader]
         private void load()
         {
-            AddRangeInternal(new Drawable[]
-            {
-                HitObjectContainer,
-            });
+            AddRangeInternal([
+                HitObjectContainer
+            ]);
         }
     }
 }

@@ -31,5 +31,7 @@ namespace osu.Game.Rulesets.NotOsu.UI
         public override DrawableHitObject<NotOsuHitObject> CreateDrawableRepresentation(NotOsuHitObject h) => new DrawableNotOsuHitObject(h);
 
         protected override PassThroughInputManager CreateInputManager() => new NotOsuInputManager(Ruleset?.RulesetInfo);
+
+        public override PlayfieldAdjustmentContainer CreatePlayfieldAdjustmentContainer() => new NotOsuAdjustmentContainer();
     }
 }
